@@ -1,0 +1,77 @@
+.story {
+  position: relative;
+  overflow: hidden;
+  background: var(--acai-deep);
+  color: var(--on-dark);
+}
+.story__decor { position: absolute; inset: 0; pointer-events: none; }
+.story__sun { position: absolute; top: -7rem; left: -7rem; width: 28rem; opacity: 0.14; }
+.story__leaf { position: absolute; }
+.story__leaf--a { width: 9rem; top: 7%; right: 4%; opacity: 0.22; }
+.story__leaf--b { width: 8rem; bottom: 16%; left: 1%; opacity: 0.26; }
+
+.story__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+.story__title { font-size: var(--text-2xl); color: var(--on-dark); margin-top: var(--space-sm); }
+.story__text {
+  margin-top: var(--space-md);
+  color: var(--on-dark-2);
+  font-size: var(--text-md);
+  max-width: 46ch;
+  line-height: calc(var(--lh-body) + 0.06);
+}
+
+.story__photo {
+  position: relative;
+  aspect-ratio: 4 / 4.3;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background:
+    radial-gradient(120% 120% at 30% 18%,
+      oklch(0.52 0.17 330) 0%,
+      oklch(0.34 0.13 332) 58%,
+      oklch(0.24 0.09 330) 100%);
+}
+.story__photo-art { position: absolute; right: -10%; bottom: -8%; width: 72%; opacity: 0.5; }
+.story__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.story__badge {
+  position: absolute;
+  left: 1rem; bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  background: var(--gold);
+  color: var(--ink);
+  border-radius: var(--r-md);
+  padding: 0.6rem 0.95rem;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  box-shadow: var(--shadow-md);
+}
+.story__badge strong { font-family: var(--font-display); font-weight: 400; font-size: var(--text-lg); }
+
+.story__benefits {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--on-dark-line);
+}
+.benefit__icon { width: 1.4rem; height: 1.4rem; color: var(--gold); margin-bottom: 0.65rem; }
+.benefit__title { color: var(--on-dark); font-size: var(--text-lg); }
+.benefit__desc { color: var(--on-dark-2); font-size: var(--text-base); margin-top: 0.3rem; line-height: var(--lh-snug); }
+
+@media (max-width: 900px) {
+  .story__inner { grid-template-columns: 1fr; }
+  .story__photo { aspect-ratio: 4 / 3.1; }
+}

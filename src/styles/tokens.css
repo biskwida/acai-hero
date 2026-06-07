@@ -1,0 +1,113 @@
+/* ============================================================
+   ACAI HERO — Design Tokens
+   "Tropical Editorial": warm paper, deep açaí ink, jungle green,
+   passionfruit gold & dragonfruit coral. Built in OKLCH so equal
+   lightness steps look equal, with neutrals tinted toward the brand.
+   ============================================================ */
+
+:root {
+  /* --- Brand surfaces (warm paper, tinted toward passionfruit ~85) --- */
+  --bg:           oklch(0.972 0.014 86);   /* warm bone — the page */
+  --bg-warm:      oklch(0.953 0.024 80);   /* deeper cream — alt sections */
+  --bg-sand:      oklch(0.935 0.030 78);   /* toasted sand — band accents */
+  --surface:      oklch(0.995 0.009 86);   /* near-white card */
+  --surface-2:    oklch(0.978 0.016 84);   /* tinted card */
+
+  /* --- Ink (deep aubergine, tinted toward açaí ~330) --- */
+  --ink:          oklch(0.245 0.052 330);  /* primary text */
+  --ink-2:        oklch(0.405 0.045 332);  /* secondary text */
+  --ink-3:        oklch(0.545 0.032 334);  /* muted / meta */
+  --line:         oklch(0.885 0.018 80);   /* warm hairline */
+  --line-strong:  oklch(0.815 0.026 78);   /* visible divider */
+
+  /* --- Açaí (the signature berry) --- */
+  --acai:         oklch(0.420 0.150 330);  /* berry purple */
+  --acai-deep:    oklch(0.285 0.110 332);  /* deep section ground */
+  --acai-deeper:  oklch(0.225 0.085 330);  /* near-black berry */
+  --acai-bright:  oklch(0.560 0.205 328);  /* vivid accent / focus */
+
+  /* --- Tropical accents --- */
+  --leaf:         oklch(0.610 0.140 150);  /* amazon green */
+  --leaf-deep:    oklch(0.455 0.110 153);  /* deep leaf (text-safe) */
+  --gold:         oklch(0.835 0.150 86);   /* passionfruit */
+  --gold-deep:    oklch(0.720 0.155 75);   /* amber (text-safe-ish) */
+  --coral:        oklch(0.700 0.170 28);   /* dragonfruit / pitaya */
+  --coral-deep:   oklch(0.585 0.165 27);   /* coral (text-safe) */
+  --mango:        oklch(0.780 0.160 62);   /* mango */
+
+  /* --- Text on dark berry grounds --- */
+  --on-dark:      oklch(0.962 0.020 85);   /* warm cream text */
+  --on-dark-2:    oklch(0.820 0.040 80);   /* muted cream */
+  --on-dark-line: oklch(0.420 0.060 330);  /* hairline on dark */
+
+  /* --- Typography --- */
+  --font-display: 'Caprasimo', 'Hanken Grotesk', Georgia, 'Times New Roman', serif;
+  --font-body:    'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-xs:   0.78rem;
+  --text-sm:   0.9rem;
+  --text-base: 1.0625rem;
+  --text-md:   1.1875rem;
+  --text-lg:   clamp(1.35rem, 1.18rem + 0.75vw, 1.85rem);
+  --text-xl:   clamp(1.8rem, 1.42rem + 1.7vw, 2.75rem);
+  --text-2xl:  clamp(2.35rem, 1.7rem + 2.9vw, 3.9rem);
+  --text-3xl:  clamp(2.9rem, 1.8rem + 4.9vw, 5.4rem);
+  --text-hero: clamp(3.4rem, 1.1rem + 8.4vw, 8rem);
+
+  --lh-hero:    0.94;
+  --lh-display: 1.04;
+  --lh-heading: 1.13;
+  --lh-snug:    1.32;
+  --lh-body:    1.62;
+
+  --track-hero:    -0.022em;
+  --track-display: -0.014em;
+  --track-tight:   -0.01em;
+  --track-label:    0.16em;
+
+  /* --- Spacing (4pt) --- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-section: clamp(4.5rem, 8vw, 9rem);
+  --gutter: clamp(1.15rem, 4vw, 3rem);
+
+  /* --- Radii --- */
+  --r-sm:  0.5rem;
+  --r-md:  0.875rem;
+  --r-lg:  1.5rem;
+  --r-xl:  2.25rem;
+  --r-pill: 999px;
+  --r-blob: 62% 38% 46% 54% / 58% 50% 50% 42%;
+
+  /* --- Shadows (subtle, tinted toward berry) --- */
+  --shadow-sm: 0 1px 2px oklch(0.3 0.06 330 / 0.05), 0 2px 6px oklch(0.3 0.06 330 / 0.05);
+  --shadow-md: 0 6px 14px -6px oklch(0.3 0.08 330 / 0.10), 0 12px 30px -10px oklch(0.3 0.08 330 / 0.10);
+  --shadow-lg: 0 24px 60px -22px oklch(0.28 0.10 330 / 0.30);
+  --shadow-gold: 0 14px 36px -14px oklch(0.72 0.16 78 / 0.55);
+
+  /* --- Layout --- */
+  --maxw:      75rem;     /* 1200px */
+  --maxw-wide: 84rem;
+  --maxw-text: 38rem;
+
+  /* --- Motion --- */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 0.18s;
+  --t-med:  0.32s;
+  --t-slow: 0.6s;
+
+  /* --- z-index scale --- */
+  --z-decor: 1;
+  --z-content: 2;
+  --z-nav: 100;
+  --z-overlay: 200;
+  --z-grain: 300;
+}
